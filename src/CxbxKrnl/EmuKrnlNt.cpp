@@ -1413,9 +1413,6 @@ XBSYSAPI EXPORTNUM(217) xboxkrnl::NTSTATUS NTAPI xboxkrnl::NtQueryVirtualMemory
 	}
 
 	NTSTATUS ret = g_VMManager.XbVirtualMemoryStatistics((VAddr)BaseAddress, Buffer);
-	
-	// Hack for Conker Live and Reloaded
-	ret = STATUS_TIMEOUT;
 
 	if (ret == STATUS_SUCCESS)
 	{
